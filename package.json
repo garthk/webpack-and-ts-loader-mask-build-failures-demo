@@ -1,0 +1,31 @@
+{
+  "name": "webpack-and-ts-loader-mask-build-failures-demo",
+  "version": "1.0.0",
+  "description": "demo: webpack and ts-loader masking build failures",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/garthk/webpack-and-ts-loader-mask-build-failures-demo.git"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "*.js*",
+    "*.md",
+    "dist",
+    "src",
+    "test"
+  ],
+  "scripts": {
+    "prepublish": "not-in-install && npm run build || in-install",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "Garth Kidd <garth@garthk.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "in-publish": "^2.0.0",
+    "ts-loader": "^0.8.2",
+    "typescript": "^2.0.3",
+    "webpack": "^1.13.2",
+    "webpack-validator": "^2.2.7"
+  }
+}
